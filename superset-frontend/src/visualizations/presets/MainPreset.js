@@ -82,6 +82,8 @@ import FilterBoxChartPlugin from '../FilterBox/FilterBoxChartPlugin';
 import TimeTableChartPlugin from '../TimeTable';
 import { SupersetPluginChartHelloWorld } from 'superset-plugin-chart-hello-world';
 import { SupersetChartPluginLiquid } from 'superset-chart-plugin-liquid';
+import { SupersetPluginQuarterpieChart } from 'superset-plugin-quarterpie-chart';
+import { SupersetPluginAntFunnel } from "superset-plugin-ant-funnel";
 
 export default class MainPreset extends Preset {
   constructor() {
@@ -168,6 +170,8 @@ export default class MainPreset extends Preset {
         new EchartsTreeChartPlugin().configure({ key: 'tree_chart' }),
         new SupersetPluginChartHelloWorld().configure({ key: 'ext-hello-world' }),
         new SupersetChartPluginLiquid().configure({ key: 'ext-liquid' }),
+        new SupersetPluginQuarterpieChart().configure({ key: 'ext-quarterpie' }),
+        new SupersetPluginAntFunnel().configure({ key: 'superset-plugin-ant-funnel' }),
         ...experimentalplugins,
       ],
     });
